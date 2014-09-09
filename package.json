@@ -1,6 +1,6 @@
 {
   "name": "compute-hamming",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Computes the Hamming distance between two sequences.",
   "author": {
     "name": "Athan Reines",
