@@ -1,7 +1,7 @@
 {
   "name": "compute-hamming",
   "version": "0.0.0",
-  "description": "Computes the Hamming distance between two strings/arrays.",
+  "description": "Computes the Hamming distance between two sequences.",
   "author": {
     "name": "Athan Reines",
     "email": "kgryte@gmail.com"
@@ -25,7 +25,11 @@
   "keywords": [
     "compute.io",
     "compute",
-    "computation"
+    "computation",
+    "hamming",
+    "distance",
+    "similarity",
+    "information theory"
   ],
   "bugs": {
     "url": "https://github.com/compute-io/hamming/issues"

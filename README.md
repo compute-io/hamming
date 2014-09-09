@@ -1,8 +1,10 @@
-hamming
+Hamming Distance
 ===
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url] [![Dependencies][dependencies-image]][dependencies-url]
 
-> Computes the Hamming distance between two strings/arrays.
+> Computes the [Hamming distance](http://en.wikipedia.org/wiki/Hamming_distance) between two sequences.
+
+In information theory, the Hamming distance is number of differences between two sequences of the same length. These sequences may be represented as character strings, binary strings, or arrays. 
 
 
 ## Installation
@@ -19,14 +21,24 @@ For use in the browser, use [browserify](https://github.com/substack/node-browse
 To use the module,
 
 ``` javascript
-var lib = require( 'compute-hamming' );
+var hamming = require( 'compute-hamming' );
 ```
 
 
 ## Examples
 
 ``` javascript
-var lib = require( 'compute-hamming' );
+var a = 'this is a string.',
+	b = 'thiz iz a string.';
+
+console.log( hamming( a, b ) );
+// Returns 2
+
+var c = [ 5, 23, 2, 5, 9 ],
+	d = [ 3, 21, 2, 5, 14 ];
+
+console.log( hamming( c, d ) );
+// Returns 3
 ```
 
 To run the example code from the top-level application directory,

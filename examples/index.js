@@ -1,1 +1,13 @@
-var module = require( './../lib' );
+var hamming = require( './../lib' );
+
+var a = 'this is a string.',
+	b = 'thiz iz a string.';
+
+console.log( hamming( a, b ) );
+// Returns 2
+
+var c = [ 5, 23, 2, 5, 9 ],
+	d = [ 3, 21, 2, 5, 14 ];
+
+console.log( hamming( c, d ) );
+// Returns 3
