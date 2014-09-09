@@ -4,7 +4,7 @@ Hamming Distance
 
 > Computes the [Hamming distance](http://en.wikipedia.org/wiki/Hamming_distance) between two sequences.
 
-In information theory, the Hamming distance is number of differences between two sequences of the same length. These sequences may be represented as character strings, binary strings, or arrays. 
+In [information theory](http://en.wikipedia.org/wiki/Information_theory), the Hamming distance is number of differences between two sequences of the same length. These sequences may be represented as character strings, binary strings, or arrays. 
 
 
 ## Installation
