@@ -1,3 +1,5 @@
+/* global require, describe, it */
+'use strict';
 
 // MODULES //
 
@@ -6,7 +8,6 @@ var // Expectation library:
 
 	// Module to be tested:
 	hamming = require( './../lib' );
-
 
 // VARIABLES //
 
@@ -17,7 +18,6 @@ var expect = chai.expect,
 // TESTS //
 
 describe( 'compute-hamming', function tests() {
-	'use strict';
 
 	it( 'should export a function', function test() {
 		expect( hamming ).to.be.a( 'function' );

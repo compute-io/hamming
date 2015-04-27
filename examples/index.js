@@ -1,3 +1,5 @@
+'use strict';
+
 var hamming = require( './../lib' );
 
 var a = 'this is a string.',

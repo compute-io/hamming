@@ -4,7 +4,7 @@ Hamming Distance
 
 > Computes the [Hamming distance](http://en.wikipedia.org/wiki/Hamming_distance) between two sequences.
 
-In [information theory](http://en.wikipedia.org/wiki/Information_theory), the Hamming distance is number of differences between two sequences of the same length. These sequences may be represented as character strings, binary strings, or arrays. 
+In [information theory](http://en.wikipedia.org/wiki/Information_theory), the Hamming distance is number of differences between two sequences of the same length. These sequences may be represented as character strings, binary strings, or arrays.
 
 
 ## Installation
@@ -18,7 +18,6 @@ For use in the browser, use [browserify](https://github.com/substack/node-browse
 
 ## Usage
 
-To use the module,
 
 ``` javascript
 var hamming = require( 'compute-hamming' );
@@ -28,6 +27,8 @@ var hamming = require( 'compute-hamming' );
 ## Examples
 
 ``` javascript
+var hamming = require( 'compute-hamming' );
+
 var a = 'this is a string.',
 	b = 'thiz iz a string.';
 
@@ -52,7 +53,7 @@ $ node ./examples/index.js
 
 ### Unit
 
-Unit tests use the [Mocha](http://visionmedia.github.io/mocha) test framework with [Chai](http://chaijs.com) assertions. To run the tests, execute the following command in the top-level application directory:
+Unit tests use the [Mocha](http://mochajs.org) test framework with [Chai](http://chaijs.com) assertions. To run the tests, execute the following command in the top-level application directory:
 
 ``` bash
 $ make test
@@ -72,19 +73,19 @@ $ make test-cov
 Istanbul creates a `./reports/coverage` directory. To access an HTML version of the report,
 
 ``` bash
-$ open reports/coverage/lcov-report/index.html
+$ make view-cov
 ```
 
 
+---
 ## License
 
-[MIT license](http://opensource.org/licenses/MIT). 
+[MIT license](http://opensource.org/licenses/MIT).
 
 
----
 ## Copyright
 
-Copyright &copy; 2014. Athan Reines.
+Copyright &copy; 2014-2015. Athan Reines.
 
 
 [npm-image]: http://img.shields.io/npm/v/compute-hamming.svg
