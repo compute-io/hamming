@@ -33,13 +33,23 @@
     "hamming",
     "distance",
     "similarity",
-    "information theory"
+    "information theory",
+    "mathematics",
+    "math",
+    "array",
+    "string",
+    "dist",
+    "information",
+    "overlap",
+    "intersect",
+    "difference"
   ],
   "bugs": {
     "url": "https://github.com/compute-io/hamming/issues"
   },
   "dependencies": {
     "validate.io-array": "^1.0.3",
+    "validate.io-function": "^1.0.2",
     "validate.io-string": "^1.0.2"
   },
   "devDependencies": {
