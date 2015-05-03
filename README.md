@@ -74,7 +74,8 @@ var dist = hamming( a, b, getValue );
 // returns 3
 ```
 
-__Note__: the accessor `function` is provided three arguments:
+The accessor `function` is provided three arguments:
+
 -	__d__: current datum.
 -	__i__: current datum index.
 -	__j__: sequence index; e.g., sequence `a` has index `0` and sequence `b` has index `1`. 
