@@ -1,3 +1,5 @@
+/* global require, describe, it */
+'use strict';
 
 // MODULES //
 
@@ -6,7 +8,6 @@ var // Expectation library:
 
 	// Module to be tested:
 	hamming = require( './../lib' );
-
 
 // VARIABLES //
 
@@ -17,7 +18,6 @@ var expect = chai.expect,
 // TESTS //
 
 describe( 'compute-hamming', function tests() {
-	'use strict';
 
 	it( 'should export a function', function test() {
 		expect( hamming ).to.be.a( 'function' );
@@ -25,14 +25,14 @@ describe( 'compute-hamming', function tests() {
 
 	it( 'should throw an error if not provided two strings or two arrays', function test() {
 		var values = [
-				5,
-				true,
-				undefined,
-				null,
-				NaN,
-				function(){},
-				{}
-			];
+			5,
+			true,
+			undefined,
+			null,
+			NaN,
+			function(){},
+			{}
+		];
 
 		for ( var i = 0; i < values.length; i++ ) {
 			expect( badValue( values[i], 'a' ) ).to.throw( TypeError );
@@ -41,6 +41,28 @@ describe( 'compute-hamming', function tests() {
 		function badValue( val1, val2 ) {
 			return function() {
 				hamming( val1, val2 );
+			};
+		}
+	});
+
+	it( 'should throw an error if provided an accessor argument which is not a function', function test() {
+		var values = [
+			'5',
+			5,
+			true,
+			undefined,
+			null,
+			NaN,
+			[],
+			{}
+		];
+
+		for ( var i = 0; i < values.length; i++ ) {
+			expect( badValue( values[ i ] ) ).to.throw( TypeError );
+		}
+		function badValue( value ) {
+			return function() {
+				hamming( 'beep', 'boop', value );
 			};
 		}
 	});
@@ -84,6 +106,39 @@ describe( 'compute-hamming', function tests() {
 		expected = 0;
 
 		assert.strictEqual( hamming( dat1, dat2 ), expected );
+	});
+
+	it( 'should compute the Hamming distance using an accessor function', function test() {
+		var dat1, dat2, expected, actual;
+
+		dat1 = [
+			{'x':2},
+			{'x':4},
+			{'x':5},
+			{'x':3},
+			{'x':8},
+			{'x':2}
+		];
+		dat2 = [
+			[1,3],
+			[2,1],
+			[3,5],
+			[4,3],
+			[5,7],
+			[6,2]
+		];
+
+		actual = hamming( dat1, dat2, getValue );
+		expected = 3;
+
+		assert.strictEqual( actual, expected );
+
+		function getValue( d, i, j ) {
+			if ( j === 0 ) {
+				return d.x;
+			}
+			return d[ 1 ];
+		}
 	});
 
 });
